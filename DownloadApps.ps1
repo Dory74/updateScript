@@ -6,18 +6,13 @@ $chromePath = "$privatePath\ChromeSetup.exe"
 $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 
 # Use msiexec.exe to install the MSI silently
-#Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNewWindow -Wait
+Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNewWindow -Wait
 
 Write-Host "Why wont this script update raw????3343"
 Write-Host "Chrome Started"
-#Start-Process -FilePath $chromePath -NoNewWindow -Wait
+Start-Process -FilePath $chromePath -NoNewWindow -Wait
 Write-Host "Support Assistant Started"
-Start-Process -FilePath $supportAssistantPath -NoNewWindow -Wait
-#Start-Process -FilePath $supportAssistantPath -ArgumentList "/quiet" -NoNewWindow -Wait
+Start-Process -FilePath $supportAssistantPath -NoNewWindow 
 Write-Host "Office Started"
-#Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
-Start-Process -FilePath $officePath -ArgumentList "/quiet" -Wait
+Start-Process -FilePath $officePath -ArgumentList "/quiet"
 Write-Host "Office Finished"
-#Start-Process -FilePath $chromePath -Wait
-#Start-Process -FilePath $supportAssistantPath -Wait
-#Start-Process -FilePath $officePath -Wait
