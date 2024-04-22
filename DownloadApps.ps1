@@ -12,11 +12,12 @@ $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 Write-Host "Chrome Started"
 #Start-Process -FilePath $chromePath -NoNewWindow -Wait
 Write-Host "Support Assistant Started"
-Start-Process -FilePath $supportAssistantPath -ArgumentList "/quiet" -NoNewWindow -Wait
+Start-Process -FilePath $supportAssistantPath -Wait
+#Start-Process -FilePath $supportAssistantPath -ArgumentList "/quiet" -NoNewWindow -Wait
 Write-Host "Office Started"
 #Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
-Start-Process -FilePath $officePath -ArgumentList "/qn" -Wait
-
+Start-Process -FilePath $officePath -ArgumentList "/quiet" -Wait
+Write-Host "Office Finished"
 #Start-Process -FilePath $chromePath -Wait
 #Start-Process -FilePath $supportAssistantPath -Wait
 #Start-Process -FilePath $officePath -Wait
