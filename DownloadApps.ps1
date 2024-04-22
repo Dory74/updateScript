@@ -6,16 +6,17 @@ $chromePath = "$privatePath\ChromeSetup.exe"
 $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 
 # Use msiexec.exe to install the MSI silently
-Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNewWindow -Wait
+#Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNewWindow -Wait
 #Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$privatePath\ZoomInstallerFull.msi`" /qn" -NoNewWindow -Wait
 
 Write-Host "Chrome Started"
-Start-Process -FilePath $chromePath -ArgumentList "/silent" -NoNewWindow -Wait
+#Start-Process -FilePath $chromePath -ArgumentList "/silent" -NoNewWindow -Wait
+Start-Process -FilePath $chromePath -NoNewWindow -Wait
 Write-Host "Support Assistant Started"
 Start-Process -FilePath $supportAssistantPath -ArgumentList "/silent" -NoNewWindow -Wait
 Write-Host "Office Started"
 #Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
-Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
+Start-Process -FilePath $officePath -ArgumentList "/qn" -Wait
 
 #Start-Process -FilePath $chromePath -Wait
 #Start-Process -FilePath $supportAssistantPath -Wait
