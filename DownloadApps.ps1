@@ -12,8 +12,8 @@ Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNe
 
 Start-Process -FilePath $chromePath -ArgumentList "/quiet" -NoNewWindow -Wait
 Start-Process -FilePath $supportAssistantPath -ArgumentList "/quiet" -NoNewWindow -Wait
-Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
-
+#Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
+Start-Process -FilePath $officePath -NoNewWindow -Wait
 
 #Start-Process -FilePath $chromePath -Wait
 #Start-Process -FilePath $supportAssistantPath -Wait
