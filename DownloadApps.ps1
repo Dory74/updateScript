@@ -10,7 +10,7 @@ Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNe
 
 Write-Host "Why wont this script update raw????"
 Write-Host "Chrome Started"
-Start-Process -FilePath $chromePath -NoNewWindow -Wait
+Start-Process -FilePath $chromePath -NoNewWindow 
 Write-Host "Support Assistant Started"
 Start-Process -FilePath $supportAssistantPath -NoNewWindow 
 Write-Host "Office Started"
