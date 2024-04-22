@@ -8,7 +8,7 @@ $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 # Use msiexec.exe to install the MSI silently
 Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNewWindow -Wait
 
-Write-Host "Why wont this script update raw????3343"
+Write-Host "Why wont this script update raw????"
 Write-Host "Chrome Started"
 Start-Process -FilePath $chromePath -NoNewWindow -Wait
 Write-Host "Support Assistant Started"
