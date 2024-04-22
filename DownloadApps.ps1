@@ -14,5 +14,5 @@ Start-Process -FilePath $chromePath -NoNewWindow
 Write-Host "Support Assistant Started"
 Start-Process -FilePath $supportAssistantPath -NoNewWindow 
 Write-Host "Office Started"
-Start-Process -FilePath $officePath -ArgumentList "/quiet"
+Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow 
 Write-Host "Office Finished"
