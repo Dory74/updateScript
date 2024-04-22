@@ -9,11 +9,13 @@ $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$zoomPath`" /qn" -NoNewWindow -Wait
 #Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$privatePath\ZoomInstallerFull.msi`" /qn" -NoNewWindow -Wait
 
-
-Start-Process -FilePath $chromePath -ArgumentList "/quiet" -NoNewWindow -Wait
-Start-Process -FilePath $supportAssistantPath -ArgumentList "/quiet" -NoNewWindow -Wait
+Write-Host "Chrome Started"
+Start-Process -FilePath $chromePath -ArgumentList "/qn" -NoNewWindow -Verb RunAs -Wait
+Write-Host "Support Assistant Started"
+Start-Process -FilePath $supportAssistantPath -ArgumentList "/qn" -NoNewWindow -Verb RunAs -Wait
+Write-Host "Office Started"
 #Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow -Wait
-Start-Process -FilePath $officePath -NoNewWindow -Wait
+Start-Process -FilePath $officePath -ArgumentList "/qn" -NoNewWindow -Verb RunAs -Wait
 
 #Start-Process -FilePath $chromePath -Wait
 #Start-Process -FilePath $supportAssistantPath -Wait
