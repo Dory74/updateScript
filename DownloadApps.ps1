@@ -1,4 +1,4 @@
-﻿# Replace "X:\path\to\installer.msi" with the actual path to your MSI file
+﻿
 $privatePath = "\\seeka-360-fs1\private\Blake-LaptopBuilds"
 $zoomPath = "$privatePath\ZoomInstallerFull.msi"
 $officePath = "\\SEEKA-HQDC1\dfs\clientapps\Office365\Online Installer\OfficeSetup.exe"
@@ -14,5 +14,5 @@ Start-Process -FilePath $chromePath -NoNewWindow
 Write-Host "Support Assistant Started"
 Start-Process -FilePath $supportAssistantPath -NoNewWindow 
 Write-Host "Office Started"
-Start-Process -FilePath $officePath -ArgumentList "/quiet" -NoNewWindow 
+Start-Process -FilePath $officePath -NoNewWindow 
 Write-Host "Office Finished"
