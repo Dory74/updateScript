@@ -2,7 +2,7 @@
 $privatePath = "\\seeka-360-fs1\private\Blake-LaptopInstallers"
 $zoomPath = "$privatePath\ZoomInstallerFull.msi"
 $officePath = "\\SEEKA-HQDC1\dfs\clientapps\Office365\Online Installer\OfficeSetup.exe"
-$chromePath = "$privatePath\ChromeSetup.exe"
+$chromePath = "$privatePath\ChromeSetup.msi"
 $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 
 # Use msiexec.exe to install the MSI silently
