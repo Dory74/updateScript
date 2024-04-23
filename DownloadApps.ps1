@@ -1,4 +1,5 @@
-﻿$privatePath = "\\seeka-360-fs1\private\Blake-LaptopInstallers"
+﻿
+$privatePath = "\\seeka-360-fs1\private\Blake-LaptopInstallers"
 $zoomPath = "$privatePath\ZoomInstallerFull.msi"
 $officePath = "\\SEEKA-HQDC1\dfs\clientapps\Office365\Online Installer\OfficeSetup.exe"
 $chromePath = "$privatePath\ChromeSetup.msi"
