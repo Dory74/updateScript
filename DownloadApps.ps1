@@ -6,7 +6,7 @@ $chromePath = "$privatePath\ChromeSetup.msi"
 $supportAssistantPath = "$privatePath\supportAssistantInstaller.exe"
 
 # Use msiexec.exe to install the MSI silently
-Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"\\seeka-360-fs1\private\Blake-LaptopInstallers\ZoomInstallerFull.msi`" /qn" -NoNewWindow
+Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"\\seeka-360-fs1\private\Blake-LaptopInstallers\ZoomInstallerFull.msi`" /qn" -NoNewWindow -Wait
 Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$chromePath`" /qn" -NoNewWindow
 #Start-Process -FilePath $supportAssistantPath -ArgumentList "/s", "/a", "/v/qn" -NoNewWindow
 
